@@ -8,7 +8,7 @@ This project is devoted to EJCN schemas, which enable you to provide a [UML](#um
 
 Throughout the history of programming and computer science, naming has been a hot topic.
 
-For EJCN Schemas, we suggest the use of [snake case](#snake-case) for package names and <b>English Proper Noun<b/> style capitalization (first letter) for class names, with subsequent letters following the [camel case](#camel-case) convention.
+For EJCN Schemas, we suggest the use of [snake case](#snake-case) for package names and <b>English Proper Noun</b> style capitalization (first letter) for class names, with subsequent letters following the [camel case](#camel-case) convention.
 
 In addition, we suggest all name parts stay less than 63 characters.
 
