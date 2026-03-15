@@ -34,7 +34,7 @@ Package names are comprised of sub-domains nearly identical to [DNS](#dns).  How
 
 ##### The not_dns. Top Level Domain
 
-The not_dns top level domain allows usage of this system, for code bases which have decided not to use DNS or register a corresponding DNS name.
+The <b>not_dns</b> top level domain allows usage of this system, for code bases which have decided not to use DNS or register a corresponding DNS name.  However, users of not-DNS are encouraged to append to this specification requesting a specific non-DNS name.  For example; <b>'not_dns.namecoin.example'</b>
 
 # Fully Qualified Class Loader Name-Space Names
 
