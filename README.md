@@ -51,7 +51,7 @@ EJCN parsers are used to read EJCN data in from files and socket streams.  Seria
 
 # Regular Expressions
 
-EJCN will allow for usage of ECMA Script regular expressions to validate data during.  Most major languages will support this indirectly, ECMAScript clearly supports it natively.  In addition, there are runtime ECMA Script implementations which can be embedded into most major programming platforms, including Java's JVM, C#, Go, Python, and Rust.
+EJCN will allow for usage of ECMA Script regular expressions to validate data during.  Most major languages will support this indirectly, ECMAScript clearly supports it natively.  In addition, there are runtime ECMA Script implementations which can be embedded into most major programming platforms, including Java's JVM (Closure, Kotlin, Groovy, Scala, Unicorn, etc), C#, Go, Python, and Rust.
 
 # Commentary
 
