@@ -92,6 +92,10 @@ I have requested the <b>ejcns</b> file name and associated it with the <b>1.3.6.
 
 - [com.example.v1](example.ejcns)
 
+# Discussion Channel
+
+-[https://discord.gg/DdJnNufQSV](https://discord.gg/DdJnNufQSV)
+
 # Commentary
 
 This work was partially inspired by JSON Schemas, JSON Lines, Smithy, Java Serialization, XML, JSON itself, and many other tools and frameworks attempting to achieve the same goals.  Everyone would like a standard for data interchange, however, various forces have caused these standards to come in and out of fashion over the years.  This schema specification attempts to be a standard of standards, allowing the incorporation of anything anyone else could come up with.
