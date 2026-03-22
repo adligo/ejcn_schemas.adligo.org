@@ -2,11 +2,11 @@
 <!--
   Lots of comments, after this comments block, the EJCN body starts ;)
   
-  Note: If you don't want to include the lines attribute in the ClassDefinition header
-  you can put each class in it's own file!
+  Note: If you don't want to include the headerLines and lines attributed
+  in the ClassDefinition header you can put each class in it's own file!
 -->
 
-{ "class": "not_dns.ejcn.v1.ClassDefinition", "lines" : 10 }
+{ "class": "not_dns.ejcn.v1.ClassDefinition", "headerLines" : 4, "lines" : 7 }
 <!--
   Comments about the nested EJCN FirstName Definition ...
 -->
@@ -17,7 +17,7 @@
   "maxLength" : 30
 }
 
-{ "class": "not_dns.ejcn.v1.ClassDefinition", "lines" : 10 }
+{ "class": "not_dns.ejcn.v1.ClassDefinition", "headerLines" : 4, "lines" : 7 }
 <!--
   Comments about the nested EJCN MiddleNames Definition ...
 -->
@@ -28,7 +28,7 @@
   "maxLength" : 30
 }
 
-{ "class": "not_dns.ejcn.v1.ClassDefinition", "lines" : 10 }
+{ "class": "not_dns.ejcn.v1.ClassDefinition", "headerLines" : 4, "lines" : 7 }
 <!--
   Comments about the nested EJCN SurName Definition ...
 -->
@@ -39,7 +39,7 @@
   "maxLength" : 50
 }
 
-{ "class": "not_dns.ejcn.v1.ClassDefinition", "lines" : 8 }
+{ "class": "not_dns.ejcn.v1.ClassDefinition", "headerLines" : 4, "lines" : 5 }
 <!--
   Comments about the nested EJCN Birthday Definition ...
 -->
@@ -48,7 +48,7 @@
   "parentClass" : "not_dns.ejcn.v1.Date"
 }
 
-{ "class": "not_dns.ejcn.v1.ClassDefinition", "lines" : 10 }
+{ "class": "not_dns.ejcn.v1.ClassDefinition", "headerLines" : 5, "lines" : 8 }
 <!--
   Comments about the nested EJCN EMail Definition ...
   Blame Google if the RegEx has issues :)_
@@ -61,7 +61,7 @@
   "maxLength" : 50
 }
 
-{ "class": "not_dns.ejcn.v1.ClassDefinition", "lines" : 14 }
+{ "class": "not_dns.ejcn.v1.ClassDefinition", "headerLines" : 4, "lines" : 12 }
 <!--
   Comments about the nested EJCN Person Definition ...
 -->
@@ -74,5 +74,34 @@
     "email" : { "class" : "EMail", "required" : true },
     "middleNames" : { "class" : "MiddleNames", "required" : false },
     "surName" : { "class" : "SurName", "required" : true }
+  }
+}
+
+{ "class": "not_dns.ejcn.v1.ClassDefinition", "headerLines" : 7, "lines" : 12 }
+<!--
+  This is what I'm thinking a JSON Lines 
+  Schema would look like for the top (Better than CSV) example here;
+  https://jsonlines.org/examples/
+  This could then be included in the EJCN body data, yea
+-->
+{
+  "className" : "PersonsTable",
+  "parentClass" : "not_dns.ejcn.v1.Table",
+  "columns" : {
+    "firstName" : { "class" : "FirstName", "required" : false },
+    "birthday" : { "class" : "Birthday", "required" : false },
+    "email" : { "class" : "EMail", "required" : true },
+    "middleNames" : { "class" : "MiddleNames", "required" : false },
+    "surName" : { "class" : "SurName", "required" : true }
+  }
+}
+
+{ "class": "not_dns.ejcn.v1.ClassDefinition",  "headerLines" : 2, "lines" : 8 }
+// shows an override of the size required
+{
+  "className" : "Headshot",
+  "parentClass" : "not_dns.ejcn.v1.PNG",
+  "fields" : {
+    "size" : { "class" : "not_dns.ejcn.v1.Int", "required" : true }
   }
 }
