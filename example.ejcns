@@ -3,7 +3,7 @@
   Lots of comments, after this comments block, the EJCN body starts ;)
   
   Note: If you don't want to include the headerLines and lines attributed
-  in the ClassDefinition header you can put each class in it's own file!
+  in the ClassDefinition header you can put each ClassDefinition in it's own file!
 -->
 
 { "class": "not_dns.ejcn.v1.ClassDefinition", "headerLines" : 4, "lines" : 7 }
