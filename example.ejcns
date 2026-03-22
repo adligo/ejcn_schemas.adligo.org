@@ -1,4 +1,4 @@
-{ "class": "not_dns.ejcn.v1.PackageDefinition", "packageName" : "com.example.v1" }
+{ "class": "not_dns.ejcn.v1.PackageDefinition", "packageName" : "com.example.v1", "headerLines" : 7 }
 <!--
   Lots of comments, after this comments block, the EJCN body starts ;)
   
