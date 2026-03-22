@@ -86,7 +86,7 @@
 -->
 {
   "className" : "PersonsTable",
-  "parentClass" : "not_dns.ejcn.v1.Table",
+  "parentClass" : "not_dns.ejcn.v1.JsonTable",
   "columns" : {
     "firstName" : { "class" : "FirstName", "required" : false },
     "birthday" : { "class" : "Birthday", "required" : false },
