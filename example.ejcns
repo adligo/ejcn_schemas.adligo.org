@@ -1,0 +1,76 @@
+{ "class": "not_dns.ejcn.v1.PackageDefinition", "packageName" : "com.example.v1" }
+<!--
+  Lots of comments, after this comments block, the EJCN body starts ;)
+  
+  Note: If you don't want to include the lines attribute in the ClassDefinition header
+  you can put each class in it's own file!
+-->
+
+{ "class": "not_dns.ejcn.v1.ClassDefinition", "lines" : 10 }
+<!--
+  Comments about the nested EJCN FirstName Definition ...
+-->
+{
+  "className" : "FirstName",
+  "parentClass" : "not_dns.ejcn.v1.TextField",
+  "minLength" : 1,
+  "maxLength" : 30
+}
+
+{ "class": "not_dns.ejcn.v1.ClassDefinition", "lines" : 10 }
+<!--
+  Comments about the nested EJCN MiddleNames Definition ...
+-->
+{
+  "className" : "MiddleNames",
+  "parentClass" : "not_dns.ejcn.v1.TextFieldArray",
+  "minLength" : 1,
+  "maxLength" : 30
+}
+
+{ "class": "not_dns.ejcn.v1.ClassDefinition", "lines" : 10 }
+<!--
+  Comments about the nested EJCN SurName Definition ...
+-->
+{
+  "className" : "SurName",
+  "parentClass" : "not_dns.ejcn.v1.TextField",
+  "minLength" : 1,
+  "maxLength" : 30
+}
+
+{ "class": "not_dns.ejcn.v1.ClassDefinition", "lines" : 8 }
+<!--
+  Comments about the nested EJCN Birthday Definition ...
+-->
+{
+  "className" : "Birthday",
+  "parentClass" : "not_dns.ejcn.v1.Date"
+}
+
+{ "class": "not_dns.ejcn.v1.ClassDefinition", "lines" : 10 }
+<!--
+  Comments about the nested EJCN EMail Definition ...
+  Blame Google if the RegEx has issues :)_
+-->
+{
+  "className" : "EMail",
+  "parentClass" : "not_dns.ejcn.v1.TextField",
+  "regEx" : "/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/"
+}
+
+{ "class": "not_dns.ejcn.v1.ClassDefinition", "lines" : 14 }
+<!--
+  Comments about the nested EJCN Person Definition ...
+-->
+{
+  "className" : "Person",
+  "parentClass" : "not_dns.ejcn.v1.Class",
+  "fields" : {
+    "firstName" : { "class" : "com.example.v1.FirstName", "required" : false },
+    "birthday" : { "class" : "com.example.v1.Birthday", "required" : false },
+    "email" : { "class" : "com.example.v1.EMail", "required" : true },
+    "middleNames" : { "class" : "com.example.v1.MiddleNames", "required" : false },
+    "surName" : { "class" : "com.example.v1.SurName", "required" : true }
+  }
+}
