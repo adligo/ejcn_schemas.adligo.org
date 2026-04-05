@@ -1,5 +1,19 @@
 # EJCN Schemas
 
+## STATUS: De-prioritized
+
+Due to the ambiguity caused in part by the ECMA Script specification identified in JSON numbers detailed here; <br/>
+- [https://www.ietf.org/archive/id/draft-morgan-ten64-00.html#commentary](https://www.ietf.org/archive/id/draft-morgan-ten64-00.html#commentary)
+
+Work on this project has been de-prioritized and should shift to; <br/>
+- [https://github.com/adligo/xcns.adligo.org](https://github.com/adligo/xcns.adligo.org)
+
+Note: De-prioritization does NOT mean abandonment.  Should the JSON community become interested in adding a JSON v2 with additional types and clarification, or in other words a discrete decimal number system for serialization like ten10b;
+
+- [https://github.com/adligo/ten10b_v1.adligo.org](https://github.com/adligo/ten10b_v1.adligo.org)
+
+We would become interested in JSON again and resume work on this project.
+
 ### Abstract
 
 This project is devoted to EJCN schemas, which enable you to provide a [UML](#uml) style package and class name structure to describe EJCN data.  
@@ -38,16 +52,23 @@ Package names are comprised of sub-domains nearly identical to [DNS](#dns).  How
 Similar to a de facto versioning convention used in [RESTful](#rest) services versioning SHOULD be included as the last package name part before the [Class Name](#class-names). In Example;
 
 
-
 ##### The not_dns. Top Level Domain
 
 The <b>not_dns</b> top level domain allows usage of this system, for code bases which have decided not to use DNS or register a corresponding DNS name.  However, users of not-DNS are encouraged to append to this specification requesting a specific non-DNS name.  For example; <b>'not_dns.namecoin.example'</b>
+
+# Package Definitions 
+
+##### not_dns.ejcn.v1.PackageDefinition
+
+# 
 
 # Fully Qualified Class Loader Name-Space Names
 
 EJCN serializers and parser will have an optional class loader similar to [Java's Class Loader](#java).  
 
-# Class Definitions
+# Class Definitions 
+
+##### not_dns.ejcn.v1.ClassDefinition
 
 All class definitions are comprised of a single [JSON Object](#json) which MUST extend directly or indirectly from the root class.
 

@@ -1,0 +1,63 @@
+{ "class": "not_dns.ejcn.v1.PackageDefinition", "packageName" : "not_dns.ejcn.v1", "headerLines" : 3 }
+<!-- This should quantify the rules from https://github.com/adligo/ejcn.adligo.org
+-->
+{ "class": "not_dns.ejcn.v1.ClassDefinition", "lines" : 6 }
+{
+  "className" : "HeaderLines",
+  "parentClass" : "not_dns.ejcn.v1.TextField",
+  "minLength" : 1
+}
+
+{ "class": "not_dns.ejcn.v1.ClassDefinition", "lines" : 6 }
+{
+  "className" : "HeaderClass",
+  "parentClass" : "not_dns.ejcn.v1.ClassNameFull",
+  "minLength" : 1,
+  "maxLength" : 256
+}
+
+{ "class": "not_dns.ejcn.v1.ClassDefinition", "lines" : 6 }
+{
+  "className" : "BodySize",
+  "parentClass" : "not_dns.ejcn.v1.IntField",
+  "minValue": 1
+}
+
+{ "class": "not_dns.ejcn.v1.ClassDefinition", "lines" : 6 }
+{
+  "className" : "BodySize64",
+  "parentClass" : "not_dns.ejcn.v1.TextField",
+  "regEx": "/^[0-9a-zA-Z@!]+$/"
+}
+
+{ "class": "not_dns.ejcn.v1.ClassDefinition", "lines" : 6 }
+{
+  "className" : "BodyLines",
+  "parentClass" : "not_dns.ejcn.v1.IntField",
+  "minValue": 1
+}
+
+{ "class": "not_dns.ejcn.v1.ClassDefinition", "lines" : 6 }
+{
+  "className" : "BodyLines64",
+  "parentClass" : "not_dns.ejcn.v1.TextField",
+  "regEx": "/^[0-9a-zA-Z@!]+$/"
+}
+
+{ "class": "not_dns.ejcn.v1.ClassDefinition", "headerLines": 3, "lines" : 15 }
+<!-- This illustrates the zeroOrOneOf rule, there will also be a onlyOneOf rule
+-->
+{
+  "className" : "EJCNHeadder",
+  "parentClass" : "not_dns.ejcn.v1.Class",
+  "fields" : [
+    "headerLines" : { "class" : "HeaderLines", "required" : false},
+    "size" : { "class" : "BodySize", "required" : false},
+    "size64" : { "class" : "BodySize54", "required" : false},
+    "lines" : { "class" : "BodyLines", "required" : false},
+    "lines64" : { "class" : "BodyLines64", "required" : false},
+  ],
+  "rules" : [
+    "zeroOrOneOf" : ["size","size64","lines","lines64"]
+  ]
+}

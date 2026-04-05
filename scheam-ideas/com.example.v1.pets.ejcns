@@ -1,0 +1,12 @@
+{ "class": "not_dns.ejcn.v1.PackageDefinition", "packageName" : "com.example.v1", "headerLines" : 3 }
+<!-- This simply shows a typesafe enum in a EJCNS
+-->
+{ "class": "not_dns.ejcn.v1.ClassDefinition", "lines" : 7 }
+{
+  "className" : "AnimalClass",
+  "parentClass" : "not_dns.ejcn.v1.TextField",
+  "minLength" : 1,
+  "maxLength" : 30,
+  "regEx" : "(cat|dog|goldfish)"
+}
+

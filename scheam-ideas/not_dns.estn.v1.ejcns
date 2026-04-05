@@ -1,0 +1,22 @@
+{ "class": "not_dns.ejcn.v1.PackageDefinition", "packageName" : "not_dns.estn.v1", "headerLines" : 3 }
+<!-- This should quantify the rules from https://github.com/adligo/estn.adligo.org
+-->
+{ "class": "not_dns.ejcn.v1.ClassDefinition", "lines" : 6 }
+<!-- This is the full command path, (aka method or function path and name)
+-->
+{
+  "className" : "CommandFull",
+  "parentClass" : "not_dns.ejcn.v1.TextField",
+  "minLength" : 1
+}
+
+{ "class": "not_dns.ejcn.v1.ClassDefinition", "headerLines" : 3, "lines" : 6 }
+<!-- This is the extension to the EJCNHeader, note this inherits the fields from the
+parent class -->
+{
+  "className" : "ESTNHeader",
+  "parentClass" : "not_dns.ejcn.v1.EJCNHeader",
+  "fields" : [
+      "cmd" : { "class" : "CommandFull", "required" : true}
+  ]
+}
